@@ -1,6 +1,6 @@
-#Downloading file procedure
+#Downloading file procedures
 
-setwd("/Users/yannilboudo/Desktop/Coursera_Class/Exploratory_Data_Analysis/")
+setwd("/Users/yannilboudo/Desktop/Coding/Coursera_Class/Explo_Data_Analysis/")
 fileUrl<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 if(!file.exists("data")) {dir.create("data")}
 temp<-tempfile()
@@ -8,7 +8,7 @@ download.file(fileUrl, temp, method = "curl")
 
 dataDownloaded <-date()
 
-#Unzip the file
+#Unzipping the file
 data <- read.table(unz(temp, "household_power_consumption.txt"))
 unlink(temp)
 
